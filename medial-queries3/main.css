@@ -1,3 +1,44 @@
 body {
   background: peachpuff;
 }
+
+*{
+  outline: black solid 1px;
+}
+
+.container{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+min-height: 100vh;
+}
+
+.a{
+  width: 100%;
+}
+
+.b , .c , .d , .e , .f , .g{
+  width: 33%;
+}
+
+.h{
+  width: 100%;
+  
+}
+
+@media (min-width: 600px){
+  .container{
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  
+  .a{ 
+    flex-grow: 1;
+  }
+
+  .b , .c , .d , .e , .f , .h {
+    flex-grow: .5;
+  }
+}
+
