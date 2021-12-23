@@ -1,44 +1,74 @@
 body {
-  background: peachpuff;
+  background: rgb(245, 203, 166);
 }
 
-*{
+* {
   outline: black solid 1px;
 }
 
-.container{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-between;
-min-height: 100vh;
+body {
+  margin: 0%;
+  text-align: center;
 }
 
-.a{
+.container {
+  display: flex;
+  min-height: 100%;
+  flex-wrap: wrap;
+}
+
+.a {
   width: 100%;
+  height: 15vh;
+  background-color: crimson;
 }
 
-.b , .c , .d , .e , .f , .g{
-  width: 33%;
+.b,
+.c,
+.d,
+.e,
+.f,
+.g {
+  background-color: cyan;
+  width: 33.3%;
+  height: 25vh;
 }
 
-.h{
+.h {
+  background-color: darkorange;
   width: 100%;
-  
+  height: 60vh;
 }
 
-@media (min-width: 600px){
-  .container{
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-  
-  .a{ 
-    flex-grow: 1;
+@media (min-width: 600px) {
+  .a {
+    height: 30vh;
   }
 
-  .b , .c , .d , .e , .f , .h {
-    flex-grow: .5;
+  .b,
+  .c,
+  .d,
+  .e,
+  .f,
+  .g {
+    width: 20%;
+    height: 30vh;
+  }
+  .container:nth-child(4n) {
+    page-break-after: always;
+    break-after: always;
+  }
+
+  /*im so glad I found this method*/
+  .container > br {
+    width: 100%;
+    content: " ";
+  }
+
+  .h {
+    position: absolute;
+    width: 40%;
+    top: 30%;
+    left: 60%;
   }
 }
-
